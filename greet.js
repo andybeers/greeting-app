@@ -5,7 +5,7 @@ function greet(name) {
     return 'Heyyyy, what\'s up, buddy?';
   } else {
     name = name || 'friend';
-    return 'hello ' + name;
+    return 'hello ' + name + '!';
   }
 }
 
@@ -14,7 +14,7 @@ if (process.argv.length === 3) {
   console.log(bashName);
 } else if (process.argv.length === 4) {
   var bashName = greet(process.argv[2]);
-  console.log(bashName + '! Your new computer alias is: ' + generate().spaced); 
+  console.log(bashName + ' I\'ve decided your new name is: ' + generate().spaced); 
 }
 
 module.exports = greet;

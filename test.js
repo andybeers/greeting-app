@@ -1,18 +1,17 @@
 var assert = require('assert');
 var greet = require('./greet');
 var esync = require('child_process').execSync;
-var generate = require('project-name-generator');
 
 describe('greeter', function() {
 
   it('greets with name', function() {
     var greeting = greet('tester');
-    assert.equal(greeting, 'hello tester');
+    assert.equal(greeting, 'hello tester!');
   });
 
   it('greets with "friend" when no name given', function() {
     var greeting = greet();
-    assert.equal(greeting, 'hello friend');
+    assert.equal(greeting, 'hello friend!');
   });
 
   it('greets with special greeting when name is Andy', function() {
@@ -22,7 +21,14 @@ describe('greeter', function() {
 
   it('greets with arg passed from command line', function() {
     var greeting = esync('node greet.js billybob', {encoding: 'utf-8'});
-    assert.equal(greeting, 'hello billybob\n');
+    assert.equal(greeting, 'hello billybob!\n');
+  });
+
+  it('greets with cl arg + random words', function() {
+    var greeting = esync('node greet.js james name', {encoding: 'utf-8'});
+    var randomName = greeting.split(':')[1];
+    console.log(randomName);
+    assert.ok(randomName.length > 1);
   });
 
 });
