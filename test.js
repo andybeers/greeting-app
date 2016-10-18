@@ -1,6 +1,7 @@
 var assert = require('assert');
 var greet = require('./greet');
 var esync = require('child_process').execSync;
+var generate = require('project-name-generator');
 
 describe('greeter', function() {
 
