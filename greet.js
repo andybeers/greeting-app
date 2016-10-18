@@ -1,6 +1,6 @@
 function greet(name) {
-  if (name === "Andy") {
-    return "Heyyyy, what's up, buddy?";
+  if (name === 'Andy') {
+    return 'Heyyyy, what\'s up, buddy?';
   } else {
     name = name || 'friend';
     return 'hello ' + name;
