@@ -5,6 +5,7 @@
   "main": "greet.js",
   "scripts": {
     "test": "mocha",
+    "test:watch": "mocha -w",
     "lint": "eslint ."
   },
   "repository": {
