@@ -5,6 +5,7 @@
   "ecmaFeatures": {
     "modules": true
   },
+  "extends": "eslint:recommended",
   "env": {
     "browser": true,
     "jquery": true,
