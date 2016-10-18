@@ -32,5 +32,7 @@
     "afterEach": false,
     "before": false,
     "after": false
-  }
+  },
+  "no-undef": 1,
+  "no-unused-vars": 1
 }
