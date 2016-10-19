@@ -5,7 +5,6 @@
   "ecmaFeatures": {
     "modules": true
   },
-  "extends": "eslint:recommended",
   "env": {
     "browser": true,
     "jquery": true,
@@ -33,6 +32,6 @@
     "afterEach": false,
     "before": false,
     "after": false
-  },
-  "no-console": "off"
+  }
+  
 }
