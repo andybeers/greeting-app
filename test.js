@@ -27,7 +27,6 @@ describe('greeter', function() {
   it('greets with cl arg + random words', function() {
     var greeting = esync('node greet.js james name', {encoding: 'utf-8'});
     var randomName = greeting.split(':')[1];
-    console.log(randomName);
     assert.ok(randomName.length > 1);
   });
 

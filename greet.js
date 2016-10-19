@@ -9,11 +9,12 @@ function greet(name) {
   }
 }
 
+var bashName;
 if (process.argv.length === 3) {
-  let bashName = greet(process.argv[2]);
+  bashName = greet(process.argv[2]);
   console.log(bashName);
 } else if (process.argv.length === 4) {
-  let bashName = greet(process.argv[2]);
+  bashName = greet(process.argv[2]);
   console.log(bashName + ' I\'ve decided your new name is: ' + generate().spaced); 
 }
 
