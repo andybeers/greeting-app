@@ -4,8 +4,10 @@
   "description": "Says hello in a few ways",
   "main": "greet.js",
   "scripts": {
-    "test": "mocha",
-    "test:watch": "mocha -w",
+    "pretest": "npm run lint",
+    "test": "npm run test:run",
+    "test:run": "mocha",
+    "test:watch": "npm run test:run -- -w",
     "lint": "eslint ."
   },
   "repository": {
@@ -22,5 +24,8 @@
     "chai": "^3.5.0",
     "eslint": "^3.8.1",
     "mocha": "^3.1.2"
+  },
+  "dependencies": {
+    "project-name-generator": "^2.1.3"
   }
 }
